@@ -1,0 +1,73 @@
+package main.entities;
+
+import java.sql.Date;
+
+public class Certificated {
+	private String certificatedId;
+	private String certificateName;
+	private String certificateRank;
+	private Date certificateDate;
+	private String candidateId;
+
+	public Certificated() {
+
+	}
+
+	public Certificated(String certificatedId, String certificateName, String certificateRank, Date certificateDate,
+			String noCandidate) {
+		super();
+		this.certificatedId = certificatedId;
+		this.certificateName = certificateName;
+		this.certificateRank = certificateRank;
+		this.certificateDate = certificateDate;
+		this.candidateId = noCandidate;
+	}
+
+	public String getCertificatedId() {
+		return certificatedId;
+	}
+
+	public void setCertificatedId(String certificatedId) {
+		this.certificatedId = certificatedId;
+	}
+
+	public String getCertificateName() {
+		return certificateName;
+	}
+
+	public void setCertificateName(String certificateName) {
+		this.certificateName = certificateName;
+	}
+
+	public String getCertificateRank() {
+		return certificateRank;
+	}
+
+	public void setCertificateRank(String certificateRank) {
+		this.certificateRank = certificateRank;
+	}
+
+	public Date getCertificateDate() {
+		return certificateDate;
+	}
+
+	public void setCertificateDate(Date certificateDate) {
+		this.certificateDate = certificateDate;
+	}
+
+	public String getCandidateId() {
+		return candidateId;
+	}
+
+	public void setCandidateId(String candidateId) {
+		this.candidateId = candidateId;
+	}
+
+	@Override
+	public String toString() {
+		return "Certificated [certificatedId=" + certificatedId + ", certificateName=" + certificateName
+				+ ", certificateRank=" + certificateRank + ", certificateDate=" + certificateDate + ", candidateId="
+				+ candidateId + "]";
+	}
+
+}
