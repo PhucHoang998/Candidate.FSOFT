@@ -1,0 +1,87 @@
+package main.entities;
+
+import java.sql.Date;
+
+public abstract class Candidate {
+	protected String candidateId;
+	protected String fullName;
+	protected Date birthDate;
+	protected String phone;
+	protected String email;
+	protected int candidateType;
+	protected static int count = 0;
+
+	public Candidate() {
+		count++;
+	}
+
+	public Candidate(String candidateId, String fullName, Date birthDate, String phone, String email,
+			int candidateType) {
+		super();
+		this.candidateId = candidateId;
+		this.fullName = fullName;
+		this.birthDate = birthDate;
+		this.phone = phone;
+		this.email = email;
+		this.candidateType = candidateType;
+		count++;
+	}
+
+	public String getCandidateId() {
+		return candidateId;
+	}
+
+	public void setCandidateId(String candidateId) {
+		this.candidateId = candidateId;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public Date getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getCandidateType() {
+		return candidateType;
+	}
+
+	public void setCandidateType(int candidateType) {
+		this.candidateType = candidateType;
+	}
+
+	public static int getCount() {
+		return count;
+	}
+
+	public static void setCount(int count) {
+		Candidate.count = count;
+	}
+
+	public abstract void showInfo();
+}
