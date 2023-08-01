@@ -1,0 +1,48 @@
+package main.entities;
+
+import java.sql.Date;
+
+public class Experience extends Candidate {
+	private int expInYear;
+	private String proSkil;
+
+	public Experience() {
+		super();
+	}
+
+	public Experience(String candidateId, String fullName, Date birthDate, String phone, String email,
+			int candidateType, int expInYear, String proSkil) {
+		super(candidateId, fullName, birthDate, phone, email, candidateType);
+		this.expInYear = expInYear;
+		this.proSkil = proSkil;
+	}
+
+	public int getExpInYear() {
+		return expInYear;
+	}
+
+	public void setExpInYear(int expInYear) {
+		this.expInYear = expInYear;
+	}
+
+	public String getProSkil() {
+		return proSkil;
+	}
+
+	public void setProSkil(String proSkil) {
+		this.proSkil = proSkil;
+	}
+
+	@Override
+	public String toString() {
+		return "Experience [candidateId=" + candidateId + ", fullName=" + fullName + ", birthDate=" + birthDate
+				+ ", phone=" + phone + ", email=" + email + ", candidateType=" + candidateType + ", expInYear="
+				+ expInYear + ", proSkil=" + proSkil + "]";
+	}
+
+	@Override
+	public void showInfo() {
+		System.out.println(toString());
+	}
+
+}
