@@ -1,0 +1,29 @@
+package main.controller;
+
+import java.util.Scanner;
+
+import main.services.Menu;
+
+public class Controller {
+	private static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		while (true) {
+			System.out.println("1. Candidate" + "\n2. Certificated" + "\n3. Shutdown program.");
+			switch (sc.nextLine()) {
+			case "1":
+				Menu.candidateController();
+				break;
+			case "2":
+				Menu.certificatedController();
+				break;
+			case "3":
+				System.exit(0);
+				break;
+			default:
+				System.out.println("You have enter a wrong choice, please try again.");
+				break;
+			}
+		}
+	}
+}
